@@ -1,0 +1,17 @@
+{
+  "name": "@ljcf/base-lerna-monorepo-ts",
+  "private": true,
+  "workspaces": [
+    "packages/components/*",
+    "packages/storybook"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "lerna": "^6.6.2",
+    "typescript": "^5.1.6",
+    "jsdom": "^22.1.0"
+  },
+  "dependencies": {
+    "@ljcf/eslint-config-node": "*"
+  }
+}
