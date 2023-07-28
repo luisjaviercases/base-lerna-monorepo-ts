@@ -22,7 +22,7 @@ To install dependencies we will use lerna tasks.
 To install all dependencies and linking any cross-dependencies:
 
 ```shell
-lerna bootstrap
+yarn install
 ```
 
 To execute Storybook scripts we will use lerna as:
@@ -42,6 +42,9 @@ To see more information about Storybook, visit: <https://storybook.js.org/>
 
 ```
 <project-root>
+├─ 📁 .husky
+│   ├─ pre-commit
+│   ├─ pre-push
 ├─ 📁 node_modules
 ├─ 📂 packages
 │   ├─ 📂 components
@@ -56,6 +59,7 @@ To see more information about Storybook, visit: <https://storybook.js.org/>
 ├─ lerna.json
 ├─ package.json
 ├─ tsconfig.json
+├─ vitest.config.ts
 └─ <more project root files>
 ```
 
@@ -63,7 +67,7 @@ To see more information about Storybook, visit: <https://storybook.js.org/>
 
 ### Lerna
 
-Version 6.6.2
+Version 7.1.4
 
 ### Typescript
 
@@ -72,3 +76,24 @@ Version 5.1.6
 ### Storybook
 
 Version 7.0.27
+
+## Testing support
+
+Installed all necessary to do tests in future components. To execute it, we have to configure
+component scripts (in each package.json) and run it with lerna tasks
+
+```shell
+lerna run test
+```
+
+This command will trigger test scripts in all components where have it configure
+
+## Husky & Lint-Staged
+
+Husky Version 8.0.3
+Lint-staged Version 13.1.0
+
+Improved the development flow using Git Hooks that will be executed before commits and push. It will check if
+the linter passes correctly and tests give OK
+
+This ensure that the code you upload to repository has a minimum quality
