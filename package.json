@@ -1,5 +1,5 @@
 {
-  "name": "@ljcf/prueba-lerna-monorepo-ts",
+  "name": "@ljcf/base-lerna-monorepo-ts",
   "version": "0.0.0",
   "private": true,
   "keywords": [
@@ -8,7 +8,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luisjaviercases/prueba-lerna-monorepo-ts.git",
+    "url": "https://github.com/luisjaviercases/base-lerna-monorepo-ts.git",
     "directory": "./"
   },
   "publishConfig": {
